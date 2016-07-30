@@ -1,5 +1,9 @@
 CC=gcc
 
+# TODO how to make this default, but allow an override
+HIDAPI_INCDIR=/usr/local/include
+HIDAPI_LIBDIR=/usr/local/lib
+
 CFLAGS=-Wall -pedantic -g -D_THREAD_SAFE -pthread -DDEBUG
 LDFLAGS=-L$(HIDAPI_LIBDIR) -lhidapi
 
@@ -78,6 +82,7 @@ c2api.o: /usr/include/sys/_types/_ssize_t.h /usr/include/strings.h
 c2api.o: /usr/include/secure/_string.h /usr/include/secure/_common.h
 c2api.o: /usr/include/sys/time.h /usr/include/sys/_types/_fd_def.h
 c2api.o: /usr/include/sys/_types/_timespec.h
+c2api.o: /usr/include/sys/_types/_timeval64.h
 c2api.o: /usr/include/sys/_types/_time_t.h
 c2api.o: /usr/include/sys/_types/_suseconds_t.h
 c2api.o: /usr/include/sys/_types/_fd_setsize.h
