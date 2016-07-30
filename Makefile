@@ -87,7 +87,7 @@ c2api.o: /usr/include/sys/_types/_fd_zero.h
 c2api.o: /usr/include/sys/_types/_fd_copy.h /usr/include/time.h
 c2api.o: /usr/include/sys/_types/_clock_t.h /usr/include/sys/_select.h
 c2api.o: c2api.h c2api_priv.h
-c2api.o: /Users/dfogarty/usr/local/include/hidapi/hidapi.h
+c2api.o: $(HIDAPI_INCDIR)/hidapi/hidapi.h
 c2api.o: /usr/include/wchar.h /usr/include/sys/_types/_mbstate_t.h
 c2api.o: /usr/include/stdio.h /usr/include/sys/_types/_va_list.h
 c2api.o: /usr/include/sys/stdio.h /usr/include/sys/_types/_off_t.h
