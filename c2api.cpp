@@ -6,6 +6,7 @@
 #include <string.h>
 
 #include <sys/time.h>
+#include <time.h>
 
 #include "c2api.h"
 #include "c2api_priv.h"

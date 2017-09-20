@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 #include <unistd.h>
 
@@ -7,7 +8,7 @@
 #include "c2api.h"
 #include "debug.h"
 
-const char *opts[] = { 
+const char *opts[] = {
     "-h                 help",
     "-r                 reset state machine",
     "-s                 sync clock",
