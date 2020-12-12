@@ -1,0 +1,8 @@
+# skip the build products
+*.o
+
+# skip the binary itself
+c2
+
+# and emacs boogers
+*~

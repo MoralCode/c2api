@@ -1,5 +1,9 @@
 CC=gcc
 
+# TODO how to make this default, but allow an override
+HIDAPI_INCDIR=/usr/local/include
+HIDAPI_LIBDIR=/usr/local/lib
+
 CFLAGS=-Wall -pedantic -g -D_THREAD_SAFE -pthread -DDEBUG
 LDFLAGS=-L$(HIDAPI_LIBDIR) -lhidapi-libusb
 
@@ -38,9 +42,3 @@ clean: dep
 	/bin/rm -f Makefile.bak
 	/bin/rm -f csafe-pre.cpp
 # DO NOT DELETE
-
-c2api.o: csafe.h csafe_util.h
-c2api.o: debug.h utils.h
-csafe.o: csafe.h
-csafe.o: debug.h utils.h
-csafe_util.o: csafe.h utils.h
